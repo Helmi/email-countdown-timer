@@ -1,6 +1,6 @@
 <?php
 
-include 'GIFEncoder.class.php';
+require 'GIFEncoder.class.php';
 
 /**
  * Class CountdownTimer
@@ -155,7 +155,8 @@ class CountdownTimer
     $this->fontSettings['path'] = $this->fontPath . $settings['font'] . '.ttf';
     $this->fontSettings['color'] = imagecolorallocate($this->box, $this->fontColor[0], $this->fontColor[1], $this->fontColor[2]);
     $this->fontSettings['size'] = $settings['fontSize'];
-    $this->fontSettings['characterWidth'] = imagefontwidth($this->fontSettings['path']);
+//	die($this->fontSettings['path']);
+    $this->fontSettings['characterWidth'] = imagefontwidth(2);
 
     // get the width of each character
     $string = "0:";
@@ -167,7 +168,7 @@ class CountdownTimer
     for ($i = 0; $i < $strlen; $i++) {
       $dimensions = imagettfbbox($size, $angle, $fontfile, $string[$i]);
       $this->fontSettings['characterWidths'][] = array(
-        $string[i] => $dimensions[2]
+        $string[$i] => $dimensions[2]
       );
     }
 
