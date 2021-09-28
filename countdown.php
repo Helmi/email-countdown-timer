@@ -186,7 +186,7 @@ class CountdownTimer
 
   /**
    * createFrames
-   * Create all of the frames for 
+   * Create all of the frames for
    * the countdown timer
    * @return void
    */
