@@ -76,7 +76,7 @@ class CountdownTimer
   /**
    * @var int
    */
-  private $seconds = 30;
+  private $seconds = 60;
 
   /**
    * hex2rgb
