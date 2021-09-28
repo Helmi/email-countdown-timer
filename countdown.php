@@ -235,7 +235,7 @@ class CountdownTimer
       $this->loops = 0;
     }
 
-    $labels = array('Days', 'Hrs', 'Mins', 'Secs');
+    $labels = array('Tage', 'Stunden', 'Minuten', 'Sekunden');
 
     // apply the labels to the image $this->yOffset + ($this->characterHeight * 0.8)
     foreach ($labels as $key => $label) {
